@@ -218,6 +218,7 @@ def show_fsm():
 
 
 if __name__ == "__main__":
-    port = os.environ.get("PORT", 8000)
-    machine.get_graph().draw("fsm.png", prog="dot", format="png")
+    #port = os.environ.get("PORT", 8000)
+    port = os.getenv("PORT", None)
+    #machine.get_graph().draw("fsm.png", prog="dot", format="png")
     app.run(host="0.0.0.0", port=port, debug=True)
